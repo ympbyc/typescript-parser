@@ -1,16 +1,22 @@
 (ns typescript-parser.core
-  (:require [instaparse.core :as insta]))
+  (:require [instaparse.core :as insta]
+            [clojure.pprint :as pp]
+            [clojure.string :as str])
+  (:gen-class))
 
 (def grammar
   (insta/parser (slurp "typescript.ebnf")
-                :output-format :enlive
+                :output-format :hiccup
                 :optimize :memory))
 
 (defn parse-tree [s]
   (grammar s))
 
 (defn output-ts []
-  (grammar (slurp "lib.d.ts")))
+  (let [ts-src (slurp "lib.d.ts.short")
+        tss (str/split ts-src #"\}")]
+    (apply concat (pmap #(grammar (str % "}"))
+                        tss))))
 
 (defn transform [tree]
   (insta/transform
@@ -54,9 +60,48 @@
 
     tree))
 
+(defn ast->ann [tree]
+  (insta/transform
+   {:AmbientVariableDeclaration
+    (fn var-dec [id type] (list 'ann id type))
+
+    :TypeAnnotation
+    identity
+
+    :Type
+    identity
+
+    :TypeReference
+    identity
+
+    :QualifiedIdentifier
+    identity
+
+    :Identifier
+    identity
+
+    :CallSignature
+    (fn cs ([x] x)
+      ([x y] (concat x y)))
+
+    :Parameter-List
+    (fn pl [& req] req)
+
+    :RequiredParameter
+    (fn rp [& xs] xs)
+
+    :OptionalParameter
+    (fn op [& xs] xs)
+
+    :AmbientFunctionDeclaration
+    (fn fn-dec ([id cs]
+                 (list 'ann id cs)))
+    }
+   tree))
+
 #_(transform (first (output-ts)))
 
-(-> 
-"declare function eval(x: string): any;"
-    parse-tree
-    transform)
+
+(defn -main []
+  (doseq [t (output-ts)]
+    (pp/pprint (ast->ann t))))
