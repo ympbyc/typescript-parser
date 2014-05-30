@@ -198,9 +198,7 @@
    [:TypeMemberList
     [:TypeMember
      [:IndexSignature
-      "["
       [:Identifier "s"]
-      ":"
       "string"
       [:TypeAnnotation
        [:Type
@@ -283,9 +281,7 @@
           [:QualifiedIdentifier [:Identifier "boolean"]]]]]]]]
     [:TypeMember
      [:IndexSignature
-      "["
       [:Identifier "s"]
-      ":"
       "string"
       [:TypeAnnotation
        [:Type
@@ -730,9 +726,7 @@
    [:TypeMemberList
     [:TypeMember
      [:IndexSignature
-      "["
       [:Identifier "index"]
-      ":"
       "number"
       [:TypeAnnotation
        [:Type
@@ -2567,9 +2561,7 @@
    [:TypeMemberList
     [:TypeMember
      [:IndexSignature
-      "["
       [:Identifier "index"]
-      ":"
       "number"
       [:TypeAnnotation
        [:Type

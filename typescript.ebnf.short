@@ -1,0 +1,71 @@
+/* *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+/// <reference no-default-lib="true"/>
+
+/////////////////////////////
+/// ECMAScript APIs
+/////////////////////////////
+
+declare var NaN: number;
+declare var Infinity: number;
+
+declare function eval(x: string): any;
+declare function parseInt(s: string, radix?: number): number;
+declare function parseFloat(string: string): number;
+declare function isNaN(number: number): boolean;
+declare function isFinite(number: number): boolean;
+declare function decodeURI(encodedURI: string): string;
+declare function decodeURIComponent(encodedURIComponent: string): string;
+declare function encodeURI(uri: string): string;
+declare function encodeURIComponent(uriComponent: string): string;
+
+interface PropertyDescriptor {
+    configurable?: boolean;
+    enumerable?: boolean;
+    value?: any;
+    writable?: boolean;
+    get? (): any;
+    set? (v: any): void;
+}
+
+interface PropertyDescriptorMap {
+    [s: string]: PropertyDescriptor;
+}
+
+interface Object {
+    toString(): string;
+    toLocaleString(): string;
+    valueOf(): Object;
+    hasOwnProperty(v: string): boolean;
+    isPrototypeOf(v: Object): boolean;
+    propertyIsEnumerable(v: string): boolean;
+
+    [s: string]: any;
+}
+
+
+declare module Intl {
+
+    interface CollatorOptions {
+        usage?: string;
+        localeMatcher?: string;
+        numeric?: boolean;
+        caseFirst?: string;
+        sensitivity?: string;
+        ignorePunctuation?: boolean;
+    }
+
+}

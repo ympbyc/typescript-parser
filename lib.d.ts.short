@@ -56,7 +56,6 @@ interface Object {
     [s: string]: any;
 }
 
-
 declare var Object: {
     new (value?: any): Object;
     (): any;

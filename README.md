@@ -2,6 +2,53 @@
 
 Parse TypeScript type declaration files.
 
+
+```
+declare function eval(x: string): any;
+
+interface Number {
+    toString(radix?: number): string;
+    toFixed(fractionDigits?: number): string;
+    toExponential(fractionDigits?: number): string;
+    toPrecision(precision: number): string;
+}
+```
+
+instaparse
+
+```
+[{:op       :function
+  :id       'eval
+  :type-in  ['string]
+  :type-out any}
+
+ {:op      :interface
+  :id      'Number
+  :methods [
+    {:op       :function
+     :id       :toString
+     :type-in  ['number]
+     :type-out 'string}
+    {:op       :function
+     :id       :toFixed
+     :type-in  ['number]
+     :type-out 'string}
+    ...]}]
+```
+
+to-ann
+
+```
+(ann js/eval [string Any])
+
+(ann-interface Number
+  toString
+  [number -> string]
+  toFixed
+  [number -> string]
+  ...)
+```
+
 ## Usage
 
 FIXME
