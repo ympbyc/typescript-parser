@@ -228,7 +228,7 @@
 
 
 (defn -main []
-  (doseq [t (output-ts);(take 10 (drop 60 (output-ts)))
+  (doseq [t (take 20 (drop 0 (output-ts)))
           ]
     (pp/pprint (map gen/gen-tc (transform t)))
     ;;(pp/pprint t)

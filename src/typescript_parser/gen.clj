@@ -12,24 +12,38 @@
   [{:keys [id signature]}]
   (list 'ann (:id id) (gen-tc signature)))
 
+
+;; number string? -> number   ---> (Fn [number -> number] [number string -> number])
+;; number ...string -> number ---> (Fn [number string * -> number])
 (defn call
   [{:keys [t-params param-ts annotation]}]
-  (let [t (vec (concat (map gen-tc param-ts) ['-> (gen-tc annotation)]))]
+  (let [ps (map gen-tc param-ts)
+        an (gen-tc annotation)
+        reqs (map :annotation (filter #(= (:param-prop %) :required) ps))
+        opts (map :annotation (filter #(= (:param-prop %) :optional) ps))
+        t  (if (> (count opts) 0)
+             (cons 'Fn
+                   (map (fn [i] (vec (concat reqs (take i opts) ['-> an])))
+                        (range 0 (inc (count opts)))))
+             (vec (concat (map :annotation ps) ['-> an])))]
     (if t-params
       (list 'All (vec (map gen-tc t-params)) t)
       t)))
 
 (defn req-param
   [{:keys [id annotation]}]
-  (gen-tc annotation))
+  {:param-prop :required
+   :annotation (gen-tc annotation)})
 
 (defn opt-param
   [{:keys [annotation]}]
-  {:opt (gen-tc annotation)})
+  {:param-prop :optional
+   :annotation (gen-tc annotation)})
 
 (defn rest-param
   [{:keys [annotation]}]
-  (gen-tc annotation))
+  {:param-prop :rest
+   :annotation (gen-tc annotation)})
 
 (defn identifier
   [{:keys [id]}]
