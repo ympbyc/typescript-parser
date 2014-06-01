@@ -1,7 +1,8 @@
 (ns typescript-parser.core
   (:require [instaparse.core :as insta]
             [clojure.pprint :as pp]
-            [clojure.string :as str])
+            [clojure.string :as str]
+            [typescript-parser.gen :as gen])
   (:gen-class))
 
 (def grammar
@@ -31,14 +32,15 @@
     (fn tp [id constraint] (list :t-param id constraint))
 
     :Identifier
-    (fn idt [id] (symbol id))
+    (fn idt [id] {:op gen/identifier
+                 :id (symbol id)})
 
     :Constraint (fn cstr [& c] c)
 
     :Type (fn typ [t] t)
 
     :TypeReference (fn tr
-                     [id tas] (cons id (seq tas)))
+                     [id tas] id)  ;;
 
     :QualifiedIdentifier
     (fn qi ([id] id)
@@ -56,17 +58,20 @@
 
     :TypeLiteral (fn tl [t] t)
 
-    :ArrayType (fn arrt [elt] (list :array-t elt))
+    :ArrayType (fn arrt [elt] {:op gen/array-t
+                              :elt elt})
 
     :FunctionType (fn fnt
-                    ([tps ps t] {:op :fn-t
+                    ([tps ps t] {:op gen/call
                                  :t-params tps
                                  :param-ts ps
-                                 :out-t t}))
+                                 :annotation t}))
 
     :ConstructorType (fn ct [ft] (list :ctor-t ft))
 
-    :ObjectType (fn ot [tbody] {:op :obj-t
+    :ConstructSignature (fn [name call] {:op gen/method :id name :call call})
+
+    :ObjectType (fn ot [tbody] {:op gen/obj-t
                                :body tbody})
 
     ;;:TypeBody
@@ -76,31 +81,33 @@
     :TypeMember (fn tm [tm] tm)
 
     :PropertySignature (fn ps
-                         [pn ta] (list :property pn ta))
+                         [pn ta] {:op gen/parameter
+                                  :id pn
+                                  :annotation ta})
 
     :PropertyName (fn pn [pn] pn)
 
-    :CallSignature (fn cs ([tps pl ta] {:op :call
+    :CallSignature (fn cs ([tps pl ta] {:op gen/call
                                        :t-params tps
                                        :param-ts  pl
                                        :annotation ta}))
 
     :Parameter-List (fn pl [& pls] pls)
 
-    :RequiredParameter (fn ([al id ta] {:op :req-param
+    :RequiredParameter (fn ([al id ta] {:op gen/req-param
                                        :access-lev al
                                        :id id
                                        :annotation ta})
-                         ([id slit] {:op :req-param
+                         ([id slit] {:op gen/req-param
                                      :id id
                                      :deco slit}))
 
-    :OptionalParameter (fn ([al id ta] {:op :opt-param
+    :OptionalParameter (fn ([al id ta] {:op gen/opt-param
                                        :access-lev al
                                        :id  id
                                        :annotation ta
                                        :init nil})
-                         ([al id ta init] {:op :opt-param
+                         ([al id ta init] {:op gen/opt-param
                                            :access-lev al
                                            :id  id
                                            :annotation ta
@@ -110,19 +117,18 @@
     :RestParameter (fn [id ta] {:op :rest-param
                                :annotation ta})
 
-    :IndexSignature (fn [id s-or-n ta] {:op :index
+    :IndexSignature (fn [id s-or-n ta] {:op gen/index
                                        :id id
-                                       :key-t s-or-n
+                                       :key-t (symbol s-or-n)
                                        :annotation ta})
 
-    :MethodSignature (fn [prop-name call] {:op :method
+    :MethodSignature (fn [prop-name call] {:op gen/method
                                           :id prop-name
                                           :call call})
 
-    :TypeAnnotation (fn ([] nil)
-                      ([t] (first t)))
+    :TypeAnnotation (fn [t] t)
 
-    :InterfaceDeclaration (fn [id tps iec ot] {:op :interface
+    :InterfaceDeclaration (fn [id tps iec ot] {:op gen/interface
                                               :id  id
                                               :t-params tps
                                               :extends iec
@@ -155,11 +161,11 @@
 
     :ExportAssignment (fn [id] id)
 
-    :AmbientVariableDeclaration (fn [id ta] {:op :var
+    :AmbientVariableDeclaration (fn [id ta] {:op gen/declare-var
                                             :id id
                                             :annotation ta})
 
-    :AmbientFunctionDeclaration (fn [id sig] {:op :function
+    :AmbientFunctionDeclaration (fn [id sig] {:op gen/declare-function
                                              :id id
                                              :signature sig})
 
@@ -224,4 +230,6 @@
 
 (defn -main []
   (doseq [t (take 20 (output-ts))]
-    (pp/pprint (transform t))))
+    (pp/pprint (apply concat (map gen/gen-tc (transform t))))
+    ;;(pp/pprint (transform t))
+    ))

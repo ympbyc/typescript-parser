@@ -1,1364 +1,4685 @@
-Chopped up the input into 1002 chunks
-({:op :var, :id NaN, :annotation number}
- {:op :var, :id Infinity, :annotation number}
- {:op :function,
-  :id eval,
+;;This is an automatically generated file. Do not modify.
+;;LOG: Chopped up the input into 1002 chunks
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id NaN},
+  :annotation
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id number}}
+ {:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Infinity},
+  :annotation
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id number}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id eval},
   :signature
-  {:op :call,
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
    :t-params nil,
    :param-ts
-   ({:op :req-param, :access-lev nil, :id x, :annotation string}),
-   :annotation any}}
- {:op :function,
-  :id parseInt,
-  :signature
-  {:op :call,
-   :t-params nil,
-   :param-ts
-   ({:op :req-param, :access-lev nil, :id s, :annotation string}
-    {:op :opt-param,
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
      :access-lev nil,
-     :id radix,
-     :annotation number,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id x},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id any}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id parseInt},
+  :signature
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+   :t-params nil,
+   :param-ts
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id s},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id radix},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number},
      :init nil}),
-   :annotation number}}
- {:op :function,
-  :id parseFloat,
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id number}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id parseFloat},
   :signature
-  {:op :call,
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
    :t-params nil,
    :param-ts
-   ({:op :req-param, :access-lev nil, :id string, :annotation string}),
-   :annotation number}}
- {:op :function,
-  :id isNaN,
-  :signature
-  {:op :call,
-   :t-params nil,
-   :param-ts
-   ({:op :req-param, :access-lev nil, :id number, :annotation number}),
-   :annotation boolean}}
- {:op :function,
-  :id isFinite,
-  :signature
-  {:op :call,
-   :t-params nil,
-   :param-ts
-   ({:op :req-param, :access-lev nil, :id number, :annotation number}),
-   :annotation boolean}}
- {:op :function,
-  :id decodeURI,
-  :signature
-  {:op :call,
-   :t-params nil,
-   :param-ts
-   ({:op :req-param,
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
      :access-lev nil,
-     :id encodedURI,
-     :annotation string}),
-   :annotation string}}
- {:op :function,
-  :id decodeURIComponent,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id number}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id isNaN},
   :signature
-  {:op :call,
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
    :t-params nil,
    :param-ts
-   ({:op :req-param,
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
      :access-lev nil,
-     :id encodedURIComponent,
-     :annotation string}),
-   :annotation string}}
- {:op :function,
-  :id encodeURI,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id boolean}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id isFinite},
   :signature
-  {:op :call,
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
    :t-params nil,
    :param-ts
-   ({:op :req-param, :access-lev nil, :id uri, :annotation string}),
-   :annotation string}}
- {:op :function,
-  :id encodeURIComponent,
-  :signature
-  {:op :call,
-   :t-params nil,
-   :param-ts
-   ({:op :req-param,
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
      :access-lev nil,
-     :id uriComponent,
-     :annotation string}),
-   :annotation string}}
- {:op :interface,
-  :id PropertyDescriptor,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id boolean}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id decodeURI},
+  :signature
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+   :t-params nil,
+   :param-ts
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id encodedURI},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id string}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id decodeURIComponent},
+  :signature
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+   :t-params nil,
+   :param-ts
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id encodedURIComponent},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id string}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id encodeURI},
+  :signature
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+   :t-params nil,
+   :param-ts
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id uri},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id string}}}
+ {:op
+  #<gen$declare_function typescript_parser.gen$declare_function@5b86dff>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id encodeURIComponent},
+  :signature
+  {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+   :t-params nil,
+   :param-ts
+   ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+     :access-lev nil,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id uriComponent},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}),
+   :annotation
+   {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+    :id string}}}
+ {:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id PropertyDescriptor},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ((:property configurable boolean)
-    (:property enumerable boolean)
-    (:property value any)
-    (:property writable boolean)
-    {:op :method,
-     :id get,
-     :call {:op :call, :t-params nil, :param-ts nil, :annotation any}}
-    {:op :method,
-     :id set,
+   ({:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id configurable},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id enumerable},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id value},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id writable},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id get},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id set},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id v, :annotation any}),
-      :annotation void}})}})
-({:op :interface,
-  :id PropertyDescriptorMap,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id v},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id PropertyDescriptorMap},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :index,
-     :id s,
-     :key-t "string",
-     :annotation PropertyDescriptor})}})
-({:op :interface,
-  :id Object,
+   ({:op #<gen$index typescript_parser.gen$index@6dd300ce>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id s},
+     :key-t string,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id PropertyDescriptor}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Object},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id toString,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toString},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleString,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleString},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id valueOf,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id valueOf},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation Object}}
-    {:op :method,
-     :id hasOwnProperty,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Object}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id hasOwnProperty},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id v, :annotation string}),
-      :annotation boolean}}
-    {:op :method,
-     :id isPrototypeOf,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id v},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id isPrototypeOf},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id v, :annotation Object}),
-      :annotation boolean}}
-    {:op :method,
-     :id propertyIsEnumerable,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id v},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id Object}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id propertyIsEnumerable},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id v, :annotation string}),
-      :annotation boolean}}
-    {:op :index, :id s, :key-t "string", :annotation any})}})
-({:op :var, :id Object, :annotation [:op :obj-t]})
-({:op :interface,
-  :id Function,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id v},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$index typescript_parser.gen$index@6dd300ce>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id s},
+     :key-t string,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Object},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Object}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts nil,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id value},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id any}}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Object}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getPrototypeOf},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getOwnPropertyDescriptor},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id p},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id PropertyDescriptor}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getOwnPropertyNames},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id create},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id properties},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id PropertyDescriptorMap},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id defineProperty},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id p},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id attributes},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id PropertyDescriptor}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id defineProperties},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id properties},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id PropertyDescriptorMap}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id seal},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id freeze},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id preventExtensions},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id isSealed},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id isFrozen},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id isExtensible},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id keys},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id o},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Function},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id apply,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id apply},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id thisArg, :annotation any}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id argArray,
-        :annotation any,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id argArray},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
         :init nil}),
-      :annotation any}}
-    {:op :method,
-     :id call,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id call},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id thisArg, :annotation any}
-       {:op :rest-param, :annotation :array-t}),
-      :annotation any}}
-    {:op :method,
-     :id bind,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id any}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id bind},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id thisArg, :annotation any}
-       {:op :rest-param, :annotation :array-t}),
-      :annotation any}}
-    (:property prototype any)
-    (:property length number)
-    (:property arguments any)
-    (:property caller Function))}})
-({:op :var, :id Function, :annotation [:op :obj-t]})
-({:op :interface,
-  :id IArguments,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any}}
+       {:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id any}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id length},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id arguments},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id caller},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Function}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Function},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Function}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op :rest-param,
+       :annotation
+       {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+        :elt
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Function}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Function}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id IArguments},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :index, :id index, :key-t "number", :annotation any}
-    (:property length number)
-    (:property callee Function))}})
-({:op :interface,
-  :id String,
+   ({:op #<gen$index typescript_parser.gen$index@6dd300ce>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id index},
+     :key-t number,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id any}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id length},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id callee},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Function}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id String},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id toString,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toString},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id charAt,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id charAt},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id pos, :annotation number}),
-      :annotation string}}
-    {:op :method,
-     :id charCodeAt,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id pos},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id charCodeAt},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id index,
-        :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id concat,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id index},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id concat},
      :call
-     {:op :call,
-      :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation string}}
-    {:op :method,
-     :id indexOf,
-     :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id indexOf},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchString,
-        :annotation string}
-       {:op :opt-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchString},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id position,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id position},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation number}}
-    {:op :method,
-     :id lastIndexOf,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id lastIndexOf},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchString,
-        :annotation string}
-       {:op :opt-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchString},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id position,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id position},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation number}}
-    {:op :method,
-     :id localeCompare,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id localeCompare},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id that,
-        :annotation string}),
-      :annotation number}}
-    {:op :method,
-     :id match,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id that},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id match},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id regexp,
-        :annotation string}),
-      :annotation :array-t}}
-    {:op :method,
-     :id match,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id regexp},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id match},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id regexp,
-        :annotation RegExp}),
-      :annotation :array-t}}
-    {:op :method,
-     :id replace,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id regexp},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id RegExp}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id replace},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchValue,
-        :annotation string}
-       {:op :req-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id replaceValue,
-        :annotation string}),
-      :annotation string}}
-    {:op :method,
-     :id replace,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id replaceValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id replace},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchValue,
-        :annotation string}
-       {:op :req-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id replaceValue,
-        :annotation [:op :fn-t]}),
-      :annotation string}}
-    {:op :method,
-     :id replace,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id replaceValue},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id substring},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op :rest-param,
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id any}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id replace},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchValue,
-        :annotation RegExp}
-       {:op :req-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id RegExp}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id replaceValue,
-        :annotation string}),
-      :annotation string}}
-    {:op :method,
-     :id replace,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id replaceValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id replace},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id searchValue,
-        :annotation RegExp}
-       {:op :req-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id RegExp}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id replaceValue,
-        :annotation [:op :fn-t]}),
-      :annotation string}}
-    {:op :method,
-     :id search,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id replaceValue},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id substring},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op :rest-param,
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id any}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id search},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id regexp,
-        :annotation string}),
-      :annotation number}}
-    {:op :method,
-     :id search,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id regexp},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id search},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id regexp,
-        :annotation RegExp}),
-      :annotation number}}
-    {:op :method,
-     :id slice,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id regexp},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id RegExp}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id slice},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id start, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id end,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id start},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id end},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id split,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id split},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id separator,
-        :annotation string}
-       {:op :opt-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id separator},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id limit,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id limit},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id split,
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id split},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id separator,
-        :annotation RegExp}
-       {:op :opt-param,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id separator},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id RegExp}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id limit,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id limit},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id substring,
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id substring},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id start, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id end,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id start},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id end},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id toLowerCase,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLowerCase},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleLowerCase,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleLowerCase},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toUpperCase,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toUpperCase},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleUpperCase,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleUpperCase},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id trim,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id trim},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    (:property length number)
-    {:op :method,
-     :id substr,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id length},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id substr},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id from, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id length,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id from},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id length},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation string}})}})
-({:op :var, :id String, :annotation [:op :obj-t]})
-({:op :interface,
-  :id Boolean,
-  :t-params nil,
-  :extends nil,
-  :type {:op :obj-t, :body nil}})
-({:op :var, :id Boolean, :annotation [:op :obj-t]})
-({:op :interface,
-  :id Number,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id String},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id String}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id value},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id any},
+       :init nil}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id String}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id fromCharCode},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id number}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Boolean},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>, :body nil}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Boolean},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id toString,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :opt-param,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id radix,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
         :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id toFixed,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :opt-param,
-        :access-lev nil,
-        :id fractionDigits,
-        :annotation number,
-        :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id toExponential,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :opt-param,
-        :access-lev nil,
-        :id fractionDigits,
-        :annotation number,
-        :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id toPrecision,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id precision,
-        :annotation number}),
-      :annotation string}})}})
-({:op :var, :id Number, :annotation [:op :obj-t]})
-({:op :interface,
-  :id Math,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Boolean}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id value},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id any},
+       :init nil}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Boolean}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Number},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ((:property E number)
-    (:property LN10 number)
-    (:property LN2 number)
-    (:property LOG2E number)
-    (:property LOG10E number)
-    (:property PI number)
-    (:property SQRT1_2 number)
-    (:property SQRT2 number)
-    {:op :method,
-     :id abs,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toString},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id acos,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id radix},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toFixed},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id asin,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id fractionDigits},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toExponential},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id atan,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id fractionDigits},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toPrecision},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id atan2,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id precision},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Number},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id y, :annotation number}
-       {:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id ceil,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id cos,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id exp,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id floor,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id log,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id max,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation number}}
-    {:op :method,
-     :id min,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation number}}
-    {:op :method,
-     :id pow,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}
-       {:op :req-param, :access-lev nil, :id y, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id random,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id round,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id sin,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id sqrt,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}}
-    {:op :method,
-     :id tan,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id x, :annotation number}),
-      :annotation number}})}})
-({:op :var, :id Math, :annotation Math}
- {:op :interface,
-  :id Date,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Number}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id value},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id any},
+       :init nil}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id MAX_VALUE},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id MIN_VALUE},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id NaN},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id NEGATIVE_INFINITY},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id POSITIVE_INFINITY},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Math},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id toString,
+   ({:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id E},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id LN10},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id LN2},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id LOG2E},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id LOG10E},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id PI},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id SQRT1_2},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id SQRT2},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id abs},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toDateString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toTimeString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleDateString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleTimeString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id valueOf,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getTime,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getFullYear,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCFullYear,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getMonth,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCMonth,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getDate,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCDate,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getDay,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCDay,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getHours,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCHours,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getMinutes,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCMinutes,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getSeconds,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCSeconds,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getMilliseconds,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getUTCMilliseconds,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id getTimezoneOffset,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation number}}
-    {:op :method,
-     :id setTime,
-     :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id time,
-        :annotation number}),
-      :annotation void}}
-    {:op :method,
-     :id setMilliseconds,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id acos},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id ms, :annotation number}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCMilliseconds,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id ms, :annotation number}),
-      :annotation void}}
-    {:op :method,
-     :id setSeconds,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id sec, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id asin},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id atan},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id atan2},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id y},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id ceil},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id cos},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id exp},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id floor},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id log},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id max},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id number}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id min},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id number}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id pow},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id y},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id random},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id round},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id sin},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id sqrt},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id tan},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id x},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Math},
+  :annotation
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Math}}
+ {:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Date},
+  :t-params nil,
+  :extends nil,
+  :type
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toDateString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toTimeString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleDateString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleTimeString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id valueOf},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getTime},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getFullYear},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCFullYear},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getMonth},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCMonth},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getDate},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCDate},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getDay},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCDay},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getHours},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCHours},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getMinutes},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCMinutes},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getSeconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCSeconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getMilliseconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getUTCMilliseconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id getTimezoneOffset},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setTime},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id time},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setMilliseconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCMilliseconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setSeconds},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCSeconds,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCSeconds},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id sec, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setMinutes,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setMinutes},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id min, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id sec,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id min},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCMinutes,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCMinutes},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id min, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id sec,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id min},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setHours,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setHours},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id hours, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id min,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id hours},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id min},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id sec,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCHours,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCHours},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id hours, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id min,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id hours},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id min},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id sec,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id sec},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id ms,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setDate,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setDate},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id date,
-        :annotation number}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCDate,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCDate},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id date,
-        :annotation number}),
-      :annotation void}}
-    {:op :method,
-     :id setMonth,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setMonth},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id month, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id date,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCMonth,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCMonth},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id month, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id date,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setFullYear,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setFullYear},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id year, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id month,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id year},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id date,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id setUTCFullYear,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id setUTCFullYear},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id year, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id month,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id year},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}
-       {:op :opt-param,
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id date,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id toUTCString,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toUTCString},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toISOString,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toISOString},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toJSON,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toJSON},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :opt-param,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id key,
-        :annotation any,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id key},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
         :init nil}),
-      :annotation string}})}})
-({:op :var, :id Date, :annotation [:op :obj-t]})
-({:op :interface,
-  :id RegExpExecArray,
-  :t-params nil,
-  :extends nil,
-  :type
-  {:op :obj-t,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Date},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :index, :id index, :key-t "number", :annotation string}
-    (:property length number)
-    (:property index number)
-    (:property input string)
-    {:op :method,
-     :id toString,
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id toLocaleString,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id concat,
-     :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation :array-t}}
-    {:op :method,
-     :id join,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Date}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id separator,
-        :annotation string,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Date}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id value},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Date}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id year},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id hours},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id minutes},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id seconds},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation string}}
-    {:op :method,
-     :id pop,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id Date}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts nil,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id prototype},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id Date}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id parse},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id push,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation number}}
-    {:op :method,
-     :id reverse,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation :array-t}}
-    {:op :method,
-     :id shift,
-     :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation string}}
-    {:op :method,
-     :id slice,
-     :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param, :access-lev nil, :id start, :annotation number}
-       {:op :opt-param,
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
         :access-lev nil,
-        :id end,
-        :annotation number,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id s},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id UTC},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id year},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id month},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id date},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id hours},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id minutes},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id seconds},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id ms},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
         :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id sort,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id now},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
-      :param-ts
-      ({:op :opt-param,
-        :access-lev nil,
-        :id compareFn,
-        :annotation [:op :fn-t],
-        :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id splice,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id start,
-        :annotation number}),
-      :annotation :array-t}}
-    {:op :method,
-     :id splice,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param, :access-lev nil, :id start, :annotation number}
-       {:op :req-param,
-        :access-lev nil,
-        :id deleteCount,
-        :annotation number}
-       {:op :rest-param, :annotation :array-t}),
-      :annotation :array-t}}
-    {:op :method,
-     :id unshift,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts ({:op :rest-param, :annotation :array-t}),
-      :annotation number}}
-    {:op :method,
-     :id indexOf,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id searchElement,
-        :annotation string}
-       {:op :opt-param,
-        :access-lev nil,
-        :id fromIndex,
-        :annotation number,
-        :init nil}),
-      :annotation number}}
-    {:op :method,
-     :id lastIndexOf,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id searchElement,
-        :annotation string}
-       {:op :opt-param,
-        :access-lev nil,
-        :id fromIndex,
-        :annotation number,
-        :init nil}),
-      :annotation number}}
-    {:op :method,
-     :id every,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id thisArg,
-        :annotation any,
-        :init nil}),
-      :annotation boolean}}
-    {:op :method,
-     :id some,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id thisArg,
-        :annotation any,
-        :init nil}),
-      :annotation boolean}}
-    {:op :method,
-     :id forEach,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id thisArg,
-        :annotation any,
-        :init nil}),
-      :annotation void}}
-    {:op :method,
-     :id map,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id thisArg,
-        :annotation any,
-        :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id filter,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id thisArg,
-        :annotation any,
-        :init nil}),
-      :annotation :array-t}}
-    {:op :method,
-     :id reduce,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id initialValue,
-        :annotation any,
-        :init nil}),
-      :annotation any}}
-    {:op :method,
-     :id reduceRight,
-     :call
-     {:op :call,
-      :t-params nil,
-      :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id callbackfn,
-        :annotation [:op :fn-t]}
-       {:op :opt-param,
-        :access-lev nil,
-        :id initialValue,
-        :annotation any,
-        :init nil}),
-      :annotation any}})}})
-({:op :interface,
-  :id RegExp,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id RegExpExecArray},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
    :body
-   ({:op :method,
-     :id exec,
+   ({:op #<gen$index typescript_parser.gen$index@6dd300ce>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id index},
+     :key-t number,
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id length},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id index},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id input},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toString},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id toLocaleString},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id concat},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
-        :access-lev nil,
-        :id string,
-        :annotation string}),
-      :annotation RegExpExecArray}}
-    {:op :method,
-     :id test,
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+          :elt
+          {:op
+           #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+           :id string}}}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id join},
      :call
-     {:op :call,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
       :t-params nil,
       :param-ts
-      ({:op :req-param,
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
         :access-lev nil,
-        :id string,
-        :annotation string}),
-      :annotation boolean}}
-    (:property source string)
-    (:property global boolean)
-    (:property ignoreCase boolean)
-    (:property multiline boolean)
-    (:property lastIndex number)
-    {:op :method,
-     :id compile,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id separator},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id pop},
      :call
-     {:op :call, :t-params nil, :param-ts nil, :annotation RegExp}})}})
-({:op :var, :id RegExp, :annotation [:op :obj-t]})
-({:op :interface,
-  :id Error,
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id push},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id reverse},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id shift},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id string}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id slice},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id start},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id end},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id sort},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id compareFn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id a},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id b},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id number}},
+        :init nil}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id splice},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id start},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id splice},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id start},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id deleteCount},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number}}
+       {:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id unshift},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op :rest-param,
+        :annotation
+        {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+         :elt
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id string}}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id indexOf},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchElement},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id fromIndex},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id lastIndexOf},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id searchElement},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id fromIndex},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id number},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id number}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id every},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id value},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id index},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id boolean}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id some},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id value},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id index},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id boolean}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id forEach},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id value},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id index},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id void}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id void}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id map},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id value},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id index},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id any}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id any}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id filter},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id value},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id string}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id index},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id boolean}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id thisArg},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+       :elt
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id reduce},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id previousValue},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id any}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id currentValue},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id any}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id currentIndex},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id any}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id initialValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id reduceRight},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id callbackfn},
+        :annotation
+        {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+         :t-params nil,
+         :param-ts
+         ({:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id previousValue},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id any}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id currentValue},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id any}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id currentIndex},
+           :annotation
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id number}}
+          {:op
+           #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+           :access-lev nil,
+           :id
+           {:op
+            #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+            :id array},
+           :annotation
+           {:opt #<gen$array_t typescript_parser.gen$array_t@7452290>,
+            :elt
+            {:op
+             #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+             :id string}}}),
+         :annotation
+         {:op
+          #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+          :id any}}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id initialValue},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id any},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id any}}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id RegExp},
   :t-params nil,
   :extends nil,
   :type
-  {:op :obj-t,
-   :body ((:property name string) (:property message string))}})
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id exec},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id RegExpExecArray}}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id test},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id boolean}}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id source},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id global},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id ignoreCase},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id multiline},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id boolean}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id lastIndex},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id number}}
+    {:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id compile},
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts nil,
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id RegExp}}})}})
+({:op #<gen$declare_var typescript_parser.gen$declare_var@687cd1df>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id RegExp},
+  :annotation
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$method typescript_parser.gen$method@39c5e4bb>,
+     :id "new",
+     :call
+     {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+      :t-params nil,
+      :param-ts
+      ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id pattern},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string}}
+       {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+        :access-lev nil,
+        :id
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id flags},
+        :annotation
+        {:op
+         #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+         :id string},
+        :init nil}),
+      :annotation
+      {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+       :id RegExp}}}
+    {:op #<gen$call typescript_parser.gen$call@1e8e2a09>,
+     :t-params nil,
+     :param-ts
+     ({:op #<gen$req_param typescript_parser.gen$req_param@1354b04>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id pattern},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string}}
+      {:op #<gen$opt_param typescript_parser.gen$opt_param@5764c302>,
+       :access-lev nil,
+       :id
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id flags},
+       :annotation
+       {:op
+        #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+        :id string},
+       :init nil}),
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id RegExp}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $1},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $2},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $3},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $4},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $5},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $6},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $7},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $8},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id $9},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id lastMatch},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}})}})
+({:op #<gen$interface typescript_parser.gen$interface@4fbd01e0>,
+  :id
+  {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+   :id Error},
+  :t-params nil,
+  :extends nil,
+  :type
+  {:op #<gen$obj_t typescript_parser.gen$obj_t@3e663ed4>,
+   :body
+   ({:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id name},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}}
+    {:op #<gen$parameter typescript_parser.gen$parameter@44399074>,
+     :id
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id message},
+     :annotation
+     {:op #<gen$identifier typescript_parser.gen$identifier@3085b3ad>,
+      :id string}})}})

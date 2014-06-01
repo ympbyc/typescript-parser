@@ -49,6 +49,12 @@ to-ann
   ...)
 ```
 
+## tcljs lacks
+
++ annotating index on js objects (i.e interface I { [index foo]: bar })
++ annotating object and calling it (ie. var Object { (): any })
+
+
 ## Usage
 
 FIXME
