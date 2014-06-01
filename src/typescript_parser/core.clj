@@ -29,7 +29,9 @@
     (fn tps ([& tps] tps))
 
     :TypeParameter
-    (fn tp [id constraint] (list :t-param id constraint))
+    (fn tp [id constraint] {:op gen/t-param
+                           :id id
+                           :constraint constraint})
 
     :Identifier
     (fn idt [id] {:op gen/identifier
@@ -94,7 +96,7 @@
 
     :Parameter-List (fn pl [& pls] pls)
 
-    :RequiredParameter (fn ([al id ta] {:op gen/req-param
+    :RequiredParameter (fn reqp ([al id ta] {:op gen/req-param
                                        :access-lev al
                                        :id id
                                        :annotation ta})
@@ -102,7 +104,7 @@
                                      :id id
                                      :deco slit}))
 
-    :OptionalParameter (fn ([al id ta] {:op gen/opt-param
+    :OptionalParameter (fn optp ([al id ta] {:op gen/opt-param
                                        :access-lev al
                                        :id  id
                                        :annotation ta
@@ -113,63 +115,62 @@
                                            :annotation ta
                                            :init  init}))
 
-    :Initializer (fn [v] v)
-    :RestParameter (fn [id ta] {:op :rest-param
+    :Initializer (fn init [v] v)
+    :RestParameter (fn restp [id ta] {:op gen/rest-param
                                :annotation ta})
 
-    :IndexSignature (fn [id s-or-n ta] {:op gen/index
+    :IndexSignature (fn idx [id s-or-n ta] {:op gen/index
                                        :id id
                                        :key-t (symbol s-or-n)
                                        :annotation ta})
 
-    :MethodSignature (fn [prop-name call] {:op gen/method
+    :MethodSignature (fn meth [prop-name call] {:op gen/method
                                           :id prop-name
                                           :call call})
 
-    :TypeAnnotation (fn [t] t)
+    :TypeAnnotation (fn tann [t] t)
 
-    :InterfaceDeclaration (fn [id tps iec ot] {:op gen/interface
+    :InterfaceDeclaration (fn itfd [id tps iec ot] {:op gen/interface
                                               :id  id
                                               :t-params tps
                                               :extends iec
                                               :type ot})
 
-    :InterfaceExtendsClause (fn ([] nil)
-                              ([x] x))
+    :InterfaceExtendsClause (fn itfec [& xs] xs)
 
     ;;:ClassOrInterfaceTypeList (fn [& _])
 
-    :ClassHeritage (fn [cec iec] {:op :heritage
+    :ClassHeritage (fn clh [cec iec] {:op :heritage
                                  :interface iec
                                  :class cec})
 
-    :ClassExtendsClause (fn ([] nil)
+    :ClassExtendsClause (fn clec ([] nil)
                           ([c] c))
 
-    :ImplementsClause (fn ([] nil)
+    :ImplementsClause (fn implc ([] nil)
                         ([x] x))
 
-    :ImportDeclaration (fn [id qi] {:op :import
+    :ImportDeclaration (fn imptd [id qi] {:op :import
                                    :id id
                                    :subject qi})
 
-    :ExternalImportDeclaration (fn [id mr] {:op :ext-import
+    :ExternalImportDeclaration (fn eximptd [id mr] {:op :ext-import
                                            :id id
                                            :ref mr})
 
-    :ExternalModuleReference (fn [slit] slit)
+    :ExternalModuleReference (fn exmodr [slit] slit)
 
-    :ExportAssignment (fn [id] id)
+    :ExportAssignment (fn exas [id] id)
 
-    :AmbientVariableDeclaration (fn [id ta] {:op gen/declare-var
+    :AmbientVariableDeclaration (fn vard [id ta] {:op gen/declare-var
                                             :id id
                                             :annotation ta})
 
-    :AmbientFunctionDeclaration (fn [id sig] {:op gen/declare-function
-                                             :id id
-                                             :signature sig})
+    :AmbientFunctionDeclaration (fn fnd [id sig] {:op gen/declare-function
+                                                 :id id
+                                                 :signature sig})
 
-    :AmbientClassDeclaration (fn [id tps ch cb] {:op :class
+    :AmbientClassDeclaration (fn clsd [id tps ch cb] {:op :class
                                                 :id id
                                                 :t-params tps
                                                 :heritage ch
@@ -177,12 +178,12 @@
 
     ;;:AmbientClassBody (fn [& be] be)
 
-    :AmbientClassBodyElement (fn [& be] be)
+    :AmbientClassBodyElement (fn clsbe [& be] be)
 
-    :AmbientConstructorDeclaration (fn [pl] {:op :constructor
+    :AmbientConstructorDeclaration (fn ctrd [pl] {:op :constructor
                                             :params pl})
 
-    :AmbientPropertyMemberDeclaration (fn ([al pn ta] {:op :prop
+    :AmbientPropertyMemberDeclaration (fn pmd ([al pn ta] {:op :prop
                                                       :access-lev al
                                                       :annotation ta
                                                       :static? false})
@@ -192,44 +193,43 @@
                                             :annotation ta
                                             :static? true}))
 
-    :AmbientEnumDeclaration (fn [id body] {:op :enum
+    :AmbientEnumDeclaration (fn enmd [id body] {:op :enum
                                           :id id
                                           :body body})
 
     ;;:AmbientEnumBody (fn [])
 
-    :AmbientEnumMember (fn ([pn] pn)
+    :AmbientEnumMember (fn enmm ([pn] pn)
                          ([pn eq] (list pn eq)))
 
-    :AmbientModuleDeclaration (fn [qi mb] {:op :module
-                                          :id qi
-                                          :body mb})
+    :AmbientModuleDeclaration (fn modd [qi & mb] {:op :module
+                                               :id qi
+                                               :body mb})
 
-    ;;:AmbientModuleBody (fn [& _])
+    ;;:AmbientModuleBody (fn [& xs] xs)
 
     ;;:AmbientModuleElement (fn [& _])
 
-    :AmbientExternalModuleDeclaration (fn [slit emb] {:op :ext-module
+    :AmbientExternalModuleDeclaration (fn exmodd [slit emb] {:op :ext-module
                                                      :name slit
                                                      :body emb})
 
     ;;:AmbientExternalModuleBody (fn [& _])
     ;;:AmbientExternalModuleElement (fn [& _])
 
-    :LiteralValue (fn [x] (list :literal x))
-    :StringLiteral (fn [x] (list :string x))
-    :NumericLiteral (fn [x] (list :number x))
-    :AccessLevel (fn ([] nil)
+    :LiteralValue (fn litv [x] (list :literal x))
+    :StringLiteral (fn strl [x] (list :string x))
+    :NumericLiteral (fn numl [x] (list :number x))
+    :AccessLevel (fn acsl ([] nil)
                    ([x] x))}
 
    tree))
 
 
-#_(transform (first (output-ts)))
-
 
 (defn -main []
-  (doseq [t (take 20 (output-ts))]
-    (pp/pprint (apply concat (map gen/gen-tc (transform t))))
-    ;;(pp/pprint (transform t))
+  (doseq [t (output-ts);(take 10 (drop 60 (output-ts)))
+          ]
+    (pp/pprint (map gen/gen-tc (transform t)))
+    ;;(pp/pprint t)
     ))

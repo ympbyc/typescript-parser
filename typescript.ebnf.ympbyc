@@ -118,7 +118,7 @@ AmbientEnumDeclaration ::= "enum" Identifier '{' AmbientEnumBody '}'
 <AmbientEnumBody> ::= [AmbientEnumMember [',' AmbientEnumMember]* [',']]
 AmbientEnumMember ::= PropertyName [equals #"[0-9]+|0x\p{XDigit}+"]
 AmbientModuleDeclaration ::=
-  "module" ws QualifiedIdentifier ws-opt '{' AmbientModuleBody '}'
+  <"module"> ws QualifiedIdentifier ws-opt <'{'> AmbientModuleBody <'}'>
 <AmbientModuleBody> ::= (ws-opt AmbientModuleElement)* ws-opt
 <AmbientModuleElement> ::= [<"export"> ws] AmbientVariableDeclaration
                        | [<"export"> ws] AmbientFunctionDeclaration
@@ -129,7 +129,7 @@ AmbientModuleDeclaration ::=
                        | [<"export"> ws] InterfaceDeclaration
                        | [<"export"> ws] ImportDeclarartion
 AmbientExternalModuleDeclaration ::=
-  "module" StringLiteral '{' AmbientExternalModuleBody '}'
+  <"module"> StringLiteral <'{'> AmbientExternalModuleBody <'}'>
 <AmbientExternalModuleBody> ::= AmbientExternalModuleElement*
 <AmbientExternalModuleElement> ::= AmbientModuleElement
                                | ExportAssignment

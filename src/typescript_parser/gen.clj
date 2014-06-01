@@ -14,7 +14,10 @@
 
 (defn call
   [{:keys [t-params param-ts annotation]}]
-  (vec (concat (map gen-tc param-ts) ['-> (gen-tc annotation)])))
+  (let [t (vec (concat (map gen-tc param-ts) ['-> (gen-tc annotation)]))]
+    (if t-params
+      (list 'All (vec (map gen-tc t-params)) t)
+      t)))
 
 (defn req-param
   [{:keys [id annotation]}]
@@ -23,6 +26,10 @@
 (defn opt-param
   [{:keys [annotation]}]
   {:opt (gen-tc annotation)})
+
+(defn rest-param
+  [{:keys [annotation]}]
+  (gen-tc annotation))
 
 (defn identifier
   [{:keys [id]}]
@@ -55,3 +62,7 @@
 (defn array-t
   [{:keys [elt]}]
   (list (gen-tc elt) '*))
+
+(defn t-param
+  [{:keys [id constraint]}]
+  (:id id))
