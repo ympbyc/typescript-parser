@@ -43,7 +43,7 @@ ObjectType ::= <'{'> ws-opt TypeBody ws-opt <'}'>
 <TypeBody> ::= TypeMemberList ws-opt [<';'>]
 TypeMemberList ::= [TypeMember ws-opt [<';'> ws-opt TypeMember]*]
 <TypeMember> ::= PropertySignature
-              | CallSignature
+              (* | CallSignature *)
               | ConstructSignature
               | IndexSignature
               | MethodSignature
@@ -75,7 +75,7 @@ RestParameter ::= <"..."> Identifier TypeAnnotation ws-opt
 ConstructSignature ::= "new" ws-opt CallSignature
 IndexSignature ::=
   [<'['> ws-opt] Identifier ws-opt <':'> ws-opt #"string|number" rbrace TypeAnnotation
-MethodSignature ::= !("new" ws | "new(") PropertyName [<'?'>] ws-opt CallSignature
+MethodSignature ::= !("new" ws | "new(") [PropertyName] [<'?'>] ws-opt CallSignature
 TypeAnnotation ::= [ws-opt <':'> ws Type]
 InterfaceDeclaration ::=
   <"interface"> ws Identifier TypeParameters ws-opt InterfaceExtendsClause ws-opt ObjectType

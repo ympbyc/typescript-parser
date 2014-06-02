@@ -71,7 +71,7 @@
 
     :ConstructorType (fn ct [ft] (list :ctor-t ft))
 
-    :ConstructSignature (fn [name call] {:op gen/method :id name :call call})
+    :ConstructSignature (fn [name call] {:op gen/method :id {:id 'new} :call call})
 
     :ObjectType (fn ot [tbody] {:op gen/obj-t
                                :body tbody})
@@ -124,9 +124,13 @@
                                        :key-t (symbol s-or-n)
                                        :annotation ta})
 
-    :MethodSignature (fn meth [prop-name call] {:op gen/method
+    :MethodSignature (fn meth
+                       ([call] {:op gen/method
+                                :id   {:id 'call}
+                                :call call})
+                       ([prop-name call] {:op gen/method
                                           :id prop-name
-                                          :call call})
+                                          :call call}))
 
     :TypeAnnotation (fn tann [t] t)
 
@@ -228,8 +232,7 @@
 
 
 (defn -main []
-  (doseq [t (take 20 (drop 0 (output-ts)))
-          ]
+  (doseq [t (output-ts)]
     (pp/pprint (map gen/gen-tc (transform t)))
     ;;(pp/pprint t)
     ))

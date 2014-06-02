@@ -54,6 +54,18 @@ to-ann
 + annotating index on js objects (i.e interface I { [index foo]: bar })
 + annotationg constructor objects like Object, Function, Date, etc
 + interface with extends
++ modules (ns?)
++ string literals as types (e.g. getElementByTagName(name: "body"): NodeListOf<HTMLBodyElement>)
++ new
+
+workaround:
+
+```
+(ann new (Fn [Object Any * -> Object]
+             [Array -> (Seq Any)]
+             [Array number -> (Seq Any)]
+             ... keep adding stuff here ...))
+```
 
 
 ## Usage
