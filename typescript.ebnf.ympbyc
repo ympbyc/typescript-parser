@@ -22,7 +22,7 @@ QualifiedIdentifier ::= Identifier
 (*This isn't really necessary, but it's useful to seperate the module name*)
 ModuleName ::= Identifier ['.' Identifier]*
 TypeArguments ::= [<'<'> TypeArgumentList <'>'>]
-TypeArgumentList ::= [TypeArgument (<','> TypeArgument)*]
+<TypeArgumentList> ::= [TypeArgument (<','> TypeArgument)*]
 TypeArgument ::= ws-opt Type ws-opt
 TypeQuery ::= <"typeof"> ws QualifiedIdentifier
 TypeLiteral ::= ObjectType

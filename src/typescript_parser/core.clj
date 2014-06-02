@@ -42,7 +42,9 @@
     :Type (fn typ [t] t)
 
     :TypeReference (fn tr
-                     [id tas] id)  ;;
+                     [id tas] {:op gen/typeref
+                               :id id
+                               :t-args tas})
 
     :QualifiedIdentifier
     (fn qi ([id] id)
@@ -52,9 +54,9 @@
 
     :TypeArguments (fn tas [& targs] targs)
 
-    :TypeArgumentList (fn tal [& targ] (vec targ))
+    ;;:TypeArgumentList (fn tal [& targ] (vec targ))
 
-    :TypeArgument (fn ta [t] (list :type-arg t))
+    :TypeArgument (fn ta [t] {:op gen/type-arg :type t})
 
     :TypeQuery (fn tq [qi] (list :type-of qi))
 
@@ -232,7 +234,7 @@
 
 
 (defn -main []
-  (doseq [t (output-ts)]
+  (doseq [t (take 1000 (output-ts))]
     (pp/pprint (map gen/gen-tc (transform t)))
     ;;(pp/pprint t)
     ))

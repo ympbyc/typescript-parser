@@ -50,7 +50,8 @@ interface Object {
     toLocaleString(): string;
     valueOf(): Object;
     hasOwnProperty(v: string): boolean;
-    isPrototypeOf(v: Object): boolean;
+    isPrototypeOf
+(v: Object): boolean;
     propertyIsEnumerable(v: string): boolean;
 
     [s: string]: any;

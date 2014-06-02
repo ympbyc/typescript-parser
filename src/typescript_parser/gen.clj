@@ -3,7 +3,7 @@
 (defn gen-tc
   "Generate Typed Clojure annotation from AST"
   [{op :op :as tree}]
-  (if (fn? op) (op tree) '*not-implemented*))
+  (if (fn? op) (op tree) (list '*not-implemented* op)))
 
 (defn declare-var [{:keys [id annotation]}]
   (list 'ann (:id id) (gen-tc annotation)))
@@ -47,6 +47,11 @@
   {:param-prop :rest
    :annotation (gen-tc annotation)})
 
+(defn typeref
+  [{:keys [id t-args]}]
+  (if t-args (cons (gen-tc id) (map gen-tc t-args))
+      (gen-tc id)))
+
 (defn identifier
   [{:keys [id]}]
   id)
@@ -82,3 +87,8 @@
 (defn t-param
   [{:keys [id constraint]}]
   (:id id))
+
+
+(defn type-arg
+  [{:keys [type]}]
+  (gen-tc type))
