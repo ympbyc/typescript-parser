@@ -14,18 +14,20 @@
 
 
 ;; number string? -> number   ---> (Fn [number -> number] [number string -> number])
-;; number ...string -> number ---> (Fn [number string * -> number])
+;; number ...string -> number ---> [number string * -> number]
 (defn call
   [{:keys [t-params param-ts annotation]}]
   (let [ps (map gen-tc param-ts)
         an (gen-tc annotation)
         reqs (map :annotation (filter #(= (:param-prop %) :required) ps))
         opts (map :annotation (filter #(= (:param-prop %) :optional) ps))
-        t  (if (> (count opts) 0)
-             (cons 'Fn
-                   (map (fn [i] (vec (concat reqs (take i opts) ['-> an])))
-                        (range 0 (inc (count opts)))))
-             (vec (concat (map :annotation ps) ['-> an])))]
+        rest (first (map #(if % (list (first (rest %)) '*))
+                         (map :annotation (filter #(= (:param-prop %) :rest) ps))))
+        t    (map (fn [i] (vec (concat reqs (take i opts) ,,, )))
+                  (range 0 (inc (count opts))))
+        t    (map (fn [x] (vec (concat x ['-> an])))
+                  (concat (butlast t) (list (concat (last t) rest))))
+        t    (if (> (count opts) 0) (cons 'Fn t) (first t))]
     (if t-params
       (list 'All (vec (map gen-tc t-params)) t)
       t)))
@@ -75,7 +77,7 @@
 
 (defn array-t
   [{:keys [elt]}]
-  (list (gen-tc elt) '*))
+  (list 'Seq (gen-tc elt)))
 
 (defn t-param
   [{:keys [id constraint]}]
