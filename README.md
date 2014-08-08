@@ -39,15 +39,9 @@ What we want:
 
 ;;from interface, we construct a protocol
 (defprotocol INumber
-  (toString [this])
-  (toExponential [this])
-  (toPrecision [this]))
-
-;;and its annotation
-(ann-protocol INumber
-  toString (IFn [-> string] [number -> string])
-  toFixed  (IFn [-> string] [number -> string])
-  toPrecision [number -> string])
+  (toString      [this :- number] :- string)
+  (toExponential [this :- number] :- string)
+  (toPrecision   [this :- number] :- string))
 
 ;;var that refers to a js object
 ;;TODO: JSHMap on core.typed side
@@ -66,6 +60,45 @@ What we want:
 (ann js/Number. (IFn [-> number] [Any -> number]))
 ```
 
+extra things we might need:
+
++ `number` should implement INumber
+
+### modules and classes
+
+What we get:
+
+```typescript
+declare module goog.dom {
+  class DomHelper {
+    constructor(opt_document?: Document);
+    getElement(element: string): Element;
+  }
+  function getDomHelper(opt_element?: Node): goog.dom.DomHelper;
+  function getElementsByClass(className: string, opt_el?: Document): {length: number};
+}
+```
+
+What we want:
+
+```clojure
+(ns goog.dom)
+
+(ann-datatype DomHelper
+  [constructor :- (IFn [-> nil] [IDocument -> nil])
+   getElement  :- [string -> IElement]])
+
+(ann getDomHelper (IFn [-> DomHelper] [INode -> DomHelper]))
+(ann getElementsByClass (IFn [string -> (JSHMap :mandatory {:length number})]
+                             [string IDocument -> (JSHMap :mandatory {:length number})]))
+```
+
+This looks terribly hard :(
+
+
+## Challenges
+
++ We might need a mechanism to extend subtype test function on the fly
 
 ## Usage
 
