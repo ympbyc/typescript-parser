@@ -3,7 +3,10 @@
 Parse TypeScript type declaration files.
 
 
-```
+What we are given:
+
+```typescript
+declare var NaN: number;
 declare function eval(x: string): any;
 
 interface Number {
@@ -12,59 +15,55 @@ interface Number {
     toExponential(fractionDigits?: number): string;
     toPrecision(precision: number): string;
 }
+
+declare var Number: {
+    new (value?: any): Number;
+    (value?: any): number;
+    prototype: Number;
+    MAX_VALUE: number;
+    MIN_VALUE: number;
+    NaN: number;
+    NEGATIVE_INFINITY: number;
+    POSITIVE_INFINITY: number;
+}
 ```
 
-instaparse
+What we want:
 
-```
-[{:op       :function
-  :id       'eval
-  :type-in  ['string]
-  :type-out any}
+```clojure
+;;simple var
+(ann js/NaN number)
 
- {:op      :interface
-  :id      'Number
-  :methods [
-    {:op       :function
-     :id       :toString
-     :type-in  ['number]
-     :type-out 'string}
-    {:op       :function
-     :id       :toFixed
-     :type-in  ['number]
-     :type-out 'string}
-    ...]}]
-```
+;;simple function
+(ann js/eval [string -> Any])
 
-to-ann
+;;from interface, we construct a protocol
+(defprotocol INumber
+  (toString [this])
+  (toExponential [this])
+  (toPrecision [this]))
 
-```
-(ann js/eval [string Any])
+;;and its annotation
+(ann-protocol INumber
+  toString (IFn [-> string] [number -> string])
+  toFixed  (IFn [-> string] [number -> string])
+  toPrecision [number -> string])
 
-(ann-interface Number
-  toString
-  [number -> string]
-  toFixed
-  [number -> string]
-  ...)
-```
+;;var that refers to a js object
+;;TODO: JSHMap on core.typed side
+;;Number is an example of var that acts as a namespace and a constructor
+(ann js/Number
+  (JSHMap :mandatory
+   {:prototype INumber
+    :MAX_VALUE number
+    :MIN_VALUE number
+    :NaN       number
+    :NEGATIVE_INFINITY number
+    :POSITIVE_INFINITY number]))
 
-## tcljs lacks
-
-+ annotating index on js objects (i.e interface I { [index foo]: bar })
-+ annotationg constructor objects like Object, Function, Date, etc
-+ interface with extends
-+ modules (ns?)
-+ string literals as types (e.g. getElementByTagName(name: "body"): NodeListOf<HTMLBodyElement>)
-+ new
-
-workaround:
-
-```
-(ann new (Fn [Object Any * -> Object]
-             [Array -> (Seq Any)]
-             [Array number -> (Seq Any)]
-             ... keep adding stuff here ...))
+;;clj style constructor
+;;we get the annotation from `new` inside var declaration of js/Number
+(ann js/Number. (IFn [-> number] [Any -> number]))
 ```
 
 

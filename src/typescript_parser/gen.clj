@@ -6,11 +6,11 @@
   (if (fn? op) (op tree) (list '*not-implemented* op)))
 
 (defn declare-var [{:keys [id annotation]}]
-  (list 'ann (:id id) (gen-tc annotation)))
+  (list 'ann (symbol "js" (str (:id id))) (gen-tc annotation)))
 
 (defn declare-function
   [{:keys [id signature]}]
-  (list 'ann (:id id) (gen-tc signature)))
+  (list 'ann (symbol "js" (str (:id id))) (gen-tc signature)))
 
 
 ;; number string? -> number   ---> (Fn [number -> number] [number string -> number])
@@ -92,3 +92,12 @@
 (defn type-arg
   [{:keys [type]}]
   (gen-tc type))
+
+(defn literal
+  [{:keys [val]}]
+  (list 'Value val))
+
+(defn value
+  [{:keys [val]}]
+  (println (list 'Value val))
+  (list 'Value val))
