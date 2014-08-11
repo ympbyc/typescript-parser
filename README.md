@@ -9,6 +9,7 @@ What we are given:
 declare var NaN: number;
 declare function eval(x: string): any;
 
+//typescript interface is named structural type
 interface Number {
     toString(radix?: number): string;
     toFixed(fractionDigits?: number): string;
@@ -16,6 +17,7 @@ interface Number {
     toPrecision(precision: number): string;
 }
 
+//raw structural type
 declare var Number: {
     new (value?: any): Number;
     (value?: any): number;
@@ -37,23 +39,21 @@ What we want:
 ;;simple function
 (ann js/eval [string -> Any])
 
-;;from interface, we construct a protocol
-(defprotocol INumber
-  (toString      [this :- number] :- string)
-  (toExponential [this :- number] :- string)
-  (toPrecision   [this :- number] :- string))
+;;from interface, we construct a named jsnominal
+(defjsnominal Number
+  toString      [number -> string]
+  toExponential [number -> string]
+  toPrecision   [number -> string])
 
-;;var that refers to a js object
-;;TODO: JSHMap on core.typed side
-;;Number is an example of var that acts as a namespace and a constructor
+;;raw structural type is expressed using JSNominal
 (ann js/Number
-  (JSHMap :mandatory
-   {:prototype INumber
-    :MAX_VALUE number
-    :MIN_VALUE number
-    :NaN       number
-    :NEGATIVE_INFINITY number
-    :POSITIVE_INFINITY number]))
+  (JSNominal
+   prototype Number
+   MAX_VALUE number
+   MIN_VALUE number
+   NaN       number
+   NEGATIVE_INFINITY number
+   POSITIVE_INFINITY number))
 
 ;;clj style constructor
 ;;we get the annotation from `new` inside var declaration of js/Number
@@ -84,16 +84,18 @@ What we want:
 ```clojure
 (ns goog.dom)
 
+;;we'll annotate js class using ann-datatype
 (ann-datatype DomHelper
-  [constructor :- (IFn [-> nil] [IDocument -> nil])
-   getElement  :- [string -> IElement]])
+   [getElement :- [string -> IElement]])
 
+;;constructor
+(ann DomHelper. (IFn [-> nil] [IDocument -> nil]))
 (ann getDomHelper (IFn [-> DomHelper] [INode -> DomHelper]))
 (ann getElementsByClass (IFn [string -> (JSHMap :mandatory {:length number})]
                              [string IDocument -> (JSHMap :mandatory {:length number})]))
 ```
 
-This looks terribly hard :(
+memo to myself: deftype creates host platform's barebone class. defrecord creates immutable persistent class
 
 
 ## Challenges
