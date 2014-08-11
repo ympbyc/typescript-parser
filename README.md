@@ -86,13 +86,13 @@ What we want:
 
 ;;we'll annotate js class using ann-datatype
 (ann-datatype DomHelper
-   [getElement :- [string -> IElement]])
+   [getElement :- [string -> Element]])
 
 ;;constructor
-(ann DomHelper. (IFn [-> nil] [IDocument -> nil]))
-(ann getDomHelper (IFn [-> DomHelper] [INode -> DomHelper]))
-(ann getElementsByClass (IFn [string -> (JSHMap :mandatory {:length number})]
-                             [string IDocument -> (JSHMap :mandatory {:length number})]))
+(ann DomHelper. (IFn [-> nil] [Document -> nil]))
+(ann getDomHelper (IFn [-> DomHelper] [Node -> DomHelper]))
+(ann getElementsByClass (IFn [string -> (JSNominal length number)]
+                             [string Document -> (JSNominal length number)]))
 ```
 
 memo to myself: deftype creates host platform's barebone class. defrecord creates immutable persistent class
