@@ -56,15 +56,27 @@
   [{:keys [id]}]
   id)
 
+(declare parameter method)
+
 (defn interface
-  [{:keys [id t-params extends type]}]
-  (->> (gen-tc type)
-       (cons (:id id))
-       (cons 'ann-interface)))
+  [{:keys [id t-params extends type] :as x}]
+  (let [body (:body type)]
+    (list 'ann-jsnominal (:id id)
+          [[]
+           :ancestors (set (map gen-tc extends))
+           :fields (->> body
+                        (filter #(= (:op %) parameter))
+                        (map (comp vec gen-tc))
+                        (into {}))
+           :methods (->> body
+                        (filter #(= (:op %) method))
+                        (map (comp vec gen-tc))
+                        (into {}))])))
 
 (defn obj-t
   [{:keys [body]}]
-  (mapcat gen-tc body))
+  (list 'HJSObj :mandatory
+        (into {} (map (comp vec gen-tc) body))))
 
 (defn parameter
   [{:keys [id annotation]}]

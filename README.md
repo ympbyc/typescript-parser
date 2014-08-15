@@ -10,23 +10,25 @@ declare var NaN: number;
 declare function eval(x: string): any;
 
 //typescript interface is named structural type
-interface Number {
-    toString(radix?: number): string;
-    toFixed(fractionDigits?: number): string;
-    toExponential(fractionDigits?: number): string;
-    toPrecision(precision: number): string;
+interface Uint8Array extends ArrayBufferView {
+    BYTES_PER_ELEMENT: number;
+    length: number;
+    [index: number]: number;
+    get(index: number): number;
+    set(index: number, value: number): void;
+    set(array: Uint8Array, offset?: number): void;
+    set(array: number[], offset?: number): void;
+    subarray(begin: number, end?: number): Uint8Array;
 }
 
 //raw structural type
-declare var Number: {
-    new (value?: any): Number;
-    (value?: any): number;
-    prototype: Number;
-    MAX_VALUE: number;
-    MIN_VALUE: number;
-    NaN: number;
-    NEGATIVE_INFINITY: number;
-    POSITIVE_INFINITY: number;
+declare var Uint8Array: {
+    prototype: Uint8Array;
+    new (length: number): Uint8Array;
+    new (array: Uint8Array): Uint8Array;
+    new (array: number[]): Uint8Array;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Uint8Array;
+    BYTES_PER_ELEMENT: number;
 }
 ```
 
@@ -40,29 +42,44 @@ What we want:
 (ann js/eval [string -> Any])
 
 ;;from interface, we construct a named jsnominal
-(defjsnominal Number
-  toString      [number -> string]
-  toExponential [number -> string]
-  toPrecision   [number -> string])
+(ann-jsnominal
+ Uint8Array
+ [[]
+  :ancestors
+  #{ArrayBufferView}
+  :fields
+  {BYTES_PER_ELEMENT number
+   length number}
+  :methods
+  {get [number -> number]
+   set (IFn [number -> void]
+            [number number -> void]
+            [Uint8Array -> void]
+            [Uint8Array number -> void]
+            [(Array number) -> void]
+            [(Array number) number -> void])
+   subarray (IFn [number -> Uint8Array]
+                 [number number -> Uint8Array])}])
 
-;;raw structural type is expressed using JSNominal
-(ann js/Number
-  (JSNominal
-   prototype Number
-   MAX_VALUE number
-   MIN_VALUE number
-   NaN       number
-   NEGATIVE_INFINITY number
-   POSITIVE_INFINITY number))
+;;raw structural type is expressed using HJSObj
+(ann
+ js/Uint8Array
+ (HJSObj
+  :mandatory
+  {prototype Uint8Array
+   BYTES_PER_ELEMENT number}))
 
 ;;clj style constructor
 ;;we get the annotation from `new` inside var declaration of js/Number
-(ann js/Number. (IFn [-> number] [Any -> number]))
+(ann js/Uint8Array.
+  (IFn
+    [number -> Uint8Array]
+    [Uint8Array -> Uint8Array]
+    [(Array number) -> Uint8Array]
+    [ArrayBuffer -> Uint8Array]
+    [ArrayBuffer number -> Uint8Array]
+    [ArrayBuffer number number -> Uint8Array]))
 ```
-
-extra things we might need:
-
-+ `number` should implement INumber
 
 ### modules and classes
 
